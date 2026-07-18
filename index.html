@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Md Al Amin | ML Researcher</title>
+<meta name="description" content="Md Al Amin | Machine Learning Researcher in Medical AI, Bioinformatics, and Computational Biology">
+<meta name="keywords" content="Md Al Amin, Machine Learning, Bioinformatics, Deep Learning, Medical AI, Research">
+<meta property="og:title" content="Md Al Amin | ML Researcher">
+<meta property="og:description" content="ML Research in Medical AI, Bioinformatics, and Computational Biology">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://alamint349.github.io/assets/images/photos/alamin.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fcfcfa;
+    --text:#3a3f42;
+    --muted:#727a7e;
+    --heading:#1f2528;
+    --accent:#0f6d6f;
+    --accent-2:#b5651d;
+    --accent-soft:#e6f1f0;
+    --rule:#e4e7e6;
+    --maxw:840px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:16px;
+    line-height:1.50;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:52px 26px 80px;}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s;}
+  a:hover{border-bottom-color:var(--accent);}
+
+  /* ---------- Header: photo left, text right ---------- */
+  header{
+    display:flex;gap:34px;align-items:center;
+    padding-bottom:30px;border-bottom:1px solid var(--rule);
+  }
+  .pro-pic{
+    width:170px;height:170px;flex:0 0 170px;border-radius:14px;object-fit:cover;
+    box-shadow:0 10px 30px rgba(15,109,111,.16);
+  }
+  .head-text{flex:1;min-width:0;}
+  h1{
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:2.5rem;line-height:1.1;color:var(--heading);
+    margin:0 0 6px;font-weight:800;letter-spacing:-.5px;
+  }
+  .tagline{color:var(--accent);font-weight:600;font-size:1.05rem;margin:0 0 14px;}
+  .badges{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--muted);font-size:.92rem;margin:0 0 14px;}
+  .badges span{display:inline-flex;align-items:center;gap:7px;}
+  .badges svg{width:18px;height:18px;color:var(--accent);flex:0 0 18px;}
+  .social{font-weight:600;font-size:.96rem;}
+  .social a{white-space:nowrap;}
+  .social .sep{color:var(--rule);margin:0 5px;}
+
+  .lede{margin:26px 0 0;font-size:1.03rem;}
+  .lede strong{color:var(--heading);}
+  .lede .highlight{
+    color:var(--heading);font-weight:600;
+    box-shadow:inset 0 -0.55em 0 var(--accent-soft);
+  }
+
+  /* ---------- Sections ---------- */
+  section{margin-top:40px;}
+  .sec-label{
+    font-family:"Inter",sans-serif;text-transform:uppercase;letter-spacing:.16em;
+    font-size:.74rem;font-weight:700;color:var(--accent-2);margin:0 0 4px;
+  }
+  h2{
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:1.5rem;color:var(--heading);
+    margin:0 0 18px;font-weight:700;padding-bottom:10px;border-bottom:1px solid var(--rule);
+  }
+
+  ul.clean{list-style:none;padding:0;margin:0;}
+
+  .interest li{margin-bottom:13px;padding-left:2px;}
+  .interest strong{color:var(--heading);}
+
+  /* News */
+  .news{margin-left:0;}
+  .news li{margin-bottom:11px;padding-left:20px;position:relative;}
+  .news li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;border-radius:50%;background:var(--accent);}
+  .news .date{font-weight:600;color:var(--heading);}
+  .year-tag{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-weight:700;color:var(--muted);font-size:1.12rem;margin:18px 0 9px;}
+
+  /* Experience & Education — clean flowing entries, no dividers */
+  .entry-list{margin-left:0;}
+  .entry{margin-bottom:26px;}
+  .entry:last-child{margin-bottom:0;}
+  .entry .role{font-weight:700;color:var(--heading);font-size:1.05rem;}
+  .entry .org{color:var(--accent);font-weight:600;font-size:.97rem;}
+  .entry .meta{color:var(--muted);font-size:.9rem;margin:1px 0 6px;}
+  .entry p{margin:0;font-size:.97rem;}
+  .entry ul{margin:6px 0 0;padding-left:18px;font-size:.96rem;}
+  .entry ul li{margin-bottom:3px;}
+
+  /* ---------- Publications: flowing list, no boxes ---------- */
+  ol.pubs{counter-reset:pub;list-style:none;padding:0;margin:0;}
+  ol.pubs > li{
+    counter-increment:pub;position:relative;padding:0 0 26px 44px;margin-bottom:26px;
+    border-bottom:1px solid var(--rule);
+  }
+  ol.pubs > li:last-child{border-bottom:none;margin-bottom:0;}
+  ol.pubs > li::before{
+    content:counter(pub);position:absolute;left:0;top:-2px;
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:1.5rem;font-weight:700;color:var(--accent);
+    line-height:1;
+  }
+  .pub-title{font-weight:700;color:var(--heading);font-size:1.00rem;line-height:1.4;}
+  .authors{font-size:.95rem;color:var(--text);margin:5px 0 3px;}
+  .authors .me{font-weight:700;color:var(--heading);border-bottom:2px solid var(--accent-soft);}
+  .venue{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-style:italic;color:var(--muted);font-size:1rem;}
+  .venue .tag{
+    font-family:"Inter",sans-serif;font-style:normal;background:var(--accent-soft);color:var(--accent);
+    font-weight:700;font-size:.68rem;letter-spacing:.04em;text-transform:uppercase;
+    padding:2px 8px;border-radius:4px;margin-left:8px;vertical-align:middle;
+  }
+  .abstract{font-size:.96rem;color:var(--muted);margin:9px 0 8px;}
+  .links a{
+    font-size:.85rem;font-weight:600;margin-right:8px;color:var(--accent);
+    border:1px solid var(--rule);border-radius:5px;padding:2px 10px;
+  }
+  .links a:hover{background:var(--accent-soft);border-color:var(--accent-soft);}
+
+  /* ---------- Projects share the numbered pubs styling ---------- */
+  ol.pubs > li .pub-title{margin-bottom:2px;}
+
+  /* Skills */
+  ul.skills{list-style:disc;padding-left:22px;}
+  .skills li{margin-bottom:10px;}
+  .skills li::marker{color:var(--accent);}
+  .skills strong{color:var(--heading);}
+
+  ul.awards{columns:1;list-style:disc;padding-left:22px;}
+  .awards li{margin-bottom:9px;break-inside:avoid;}
+  .awards li::marker{color:var(--accent);}
+  .awards .yr{color:var(--muted);font-size:.88rem;}
+
+  footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--rule);text-align:center;color:var(--muted);font-size:.88rem;}
+
+  @media (max-width:640px){
+    body{font-size:15px;}
+    header{flex-direction:column;text-align:center;gap:20px;}
+    .pro-pic{width:150px;height:150px;flex-basis:150px;}
+    .badges,.social{justify-content:center;}
+    .lede{text-align:left;}
+    h1{font-size:2.2rem;}
+    .awards{columns:1;}
+    .wrap{padding:40px 20px 60px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img class="pro-pic" src="https://alamint349.github.io/assets/images/photos/alamin.jpeg" alt="Md Al Amin">
+    <div class="head-text">
+      <h1>Md Al Amin</h1>
+      <p class="tagline">ML Researcher — NLP, CV, Bioinformatics &amp; Computational Biology</p>
+      <div class="badges">
+        <span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M2 13h20"/></svg>Deputy Assistant Director, Walton</span>
+        <span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/><path d="M22 10v6"/></svg>Former Research Student, DIU</span>
+      </div>
+      <div class="social">
+        <a href="mailto:alamin11-593@diu.edu.bd">Email</a><span class="sep">·</span>
+        <a href="https://scholar.google.com/citations?user=XfAQNCgAAAAJ" target="_blank" rel="noopener">Scholar</a><span class="sep">·</span>
+        <a href="https://github.com/Alamin-Tokee" target="_blank" rel="noopener">GitHub</a><span class="sep">·</span>
+        <a href="https://www.linkedin.com/in/al-amin-tokee" target="_blank" rel="noopener">LinkedIn</a><span class="sep">·</span>
+        <a href="https://orcid.org/0009-0002-8584-663X" target="_blank" rel="noopener">ORCID</a>
+      </div>
+    </div>
+  </header>
+
+  <p class="lede">I am a machine learning researcher and software engineer working at the intersection of <strong>deep learning</strong> and the <strong>life sciences</strong>. My research applies graph neural networks, protein language models, and transformer architectures to problems in <span class="highlight">bioinformatics, cancer subtyping, and medical imaging</span> — with the broader goal of building intelligent systems that improve diagnostics, patient care, and clinical decision-making.</p>
+
+  <p class="lede">I hold a B.Sc. in Software Engineering from <strong>Daffodil International University</strong>, where my thesis focused on deep-learning-based colorectal polyp detection. Alongside my research, I bring more than three years of industry experience designing scalable computer-vision and real-time analytics systems. <span class="highlight">I am actively seeking Ph.D. and research opportunities in medical AI, computational biology, and healthcare machine learning.</span></p>
+
+  <section id="interests">
+    <p class="sec-label">Focus</p>
+    <h2>Research Interests</h2>
+    <ul class="clean interest">
+      <li><strong>🧬 Bioinformatics &amp; Computational Biology</strong> — graph neural networks, protein language models, and gene-expression analysis for biomarker discovery, disease subtyping, and interpretable prediction.</li>
+      <li><strong>🩺 Medical AI &amp; Healthcare</strong> — CNN- and transformer-based systems for medical image analysis, disease diagnosis, and privacy-preserving federated learning.</li>
+      <li><strong>👁️ Computer Vision &amp; Deep Learning</strong> — detection, segmentation, and classification pipelines spanning clinical imaging and real-world industrial data.</li>
+      <li><strong>💬 NLP for Health</strong> — language models applied to electronic health records, symptom extraction, and clinical text.</li>
+    </ul>
+  </section>
+
+  <section id="news">
+    <p class="sec-label">Recent</p>
+    <h2>News &amp; Updates</h2>
+    <div class="year-tag">2025</div>
+    <ul class="clean news">
+      <li><span class="date">Dec 2025 —</span> Joined <strong>PROMISE Lab, Virginia Tech</strong> as a Research Assistant.</li>
+      <li><span class="date">Dec 2025 —</span> Two papers accepted at <strong>WIECON-ECE</strong>.</li>
+      <li><span class="date">Apr 2025 —</span> Submitted new research to a journal and a conference.</li>
+      <li><span class="date">Jan 2025 —</span> Promoted to <strong>Deputy Assistant Director</strong> at Walton Hi-Tech Industries.</li>
+    </ul>
+    <div class="year-tag">2024</div>
+    <ul class="clean news">
+      <li><span class="date">2024 —</span> <em>FedX</em> selected as a <strong>Spotlight</strong> in <em>Biological Material and Devices</em>.</li>
+      <li><span class="date">2024 —</span> Awarded the <strong>NAWA Banach Scholarship</strong> (Polish Government).</li>
+    </ul>
+  </section>
+
+
+  <section id="education">
+    <p class="sec-label">Academic</p>
+    <h2>Education</h2>
+    <div class="entry-list">
+    <div class="entry">
+      <div class="role">B.Sc. in Software Engineering</div>
+      <div class="org">Daffodil International University (DIU)</div>
+      <div class="meta">Jan 2018 – Apr 2022 · High academic distinction</div>
+      <p>Thesis: <em>Colon polyp detection using deep learning.</em> Built a strong foundation in programming, algorithms, and data structures, and began research into AI applications for healthcare.</p>
+    </div>
+    <div class="entry">
+      <div class="role">Higher Secondary — Science</div>
+      <div class="org">BAF Shaheen School &amp; College, PKP, Tangail</div>
+      <div class="meta">Sep 2015 – Jul 2017</div>
+    </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <p class="sec-label">Positions</p>
+    <h2>Research &amp; Professional Experience</h2>
+    <div class="entry-list">
+    <div class="entry">
+      <div class="role">Research Assistant</div>
+      <div class="org">Elite Research Lab — Queens, NY, USA</div>
+      <div class="meta">Jun 2026 – Present · Remote</div>
+      <p>Contributing to applied machine-learning research, with a focus on deep-learning models for biomedical and healthcare data. Collaborating across a distributed team on model development, evaluation, and reproducibility.</p>
+    </div>
+    <div class="entry">
+      <div class="role">Research Assistant</div>
+      <div class="org">PROMISE Lab, Virginia Tech — Blacksburg, VA, USA</div>
+      <div class="meta">Dec 2025 – Present · Remote</div>
+      <p>Working on graph-based and transformer models for computational biology, including gene-expression analysis, biomarker discovery, and interpretable prediction. Supporting manuscript preparation and benchmarking on public biomedical datasets.</p>
+    </div>
+    <div class="entry">
+      <div class="role">Deputy Assistant Director — SDE-III</div>
+      <div class="org">Walton Hi-Tech Industries PLC — Kaliakair, Gazipur</div>
+      <div class="meta">Jan 2025 – Present</div>
+      <p>Lead engineer for computer-vision and real-time analytics platforms across the manufacturing floor. Responsibilities include:</p>
+      <ul>
+        <li>Architecting data-acquisition pipelines with Siemens PLCs, MQTT, and single-board computers.</li>
+        <li>Designing full-stack dashboards (ReactJS, NodeJS, PHP) for KPI, downtime, and quality monitoring.</li>
+        <li>Deploying vision models for automated product and defect inspection, reducing manual checks.</li>
+        <li>Mentoring junior engineers and leading multiple concurrent Industry 4.0 initiatives.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="role">Senior Principal Officer — SDE-II</div>
+      <div class="org">Walton Hi-Tech Industries PLC — Kaliakair, Gazipur</div>
+      <div class="meta">Jan 2024 – Jan 2025</div>
+      <p>Built real-time production-analytics systems for welding and power-press machines, integrating sensor data with responsive dashboards and mobile apps to track machine health and operator efficiency.</p>
+    </div>
+    <div class="entry">
+      <div class="role">Principal Officer — SDE-I</div>
+      <div class="org">Walton Hi-Tech Industries PLC — Kaliakair, Gazipur</div>
+      <div class="meta">Sep 2023 – Jan 2024</div>
+      <p>Developed scalable backend services and data models supporting production tracking, laying groundwork for time-series analysis and maintenance forecasting.</p>
+    </div>
+    <div class="entry">
+      <div class="role">Software Engineering Apprentice</div>
+      <div class="org">Walton Hi-Tech Industries PLC — Kaliakair, Gazipur</div>
+      <div class="meta">Jan 2023 – Sep 2023</div>
+      <p>Contributed to full-stack development across industrial software projects while building expertise in system design and deployment workflows.</p>
+    </div>
+    <div class="entry">
+      <div class="role">Software Engineering Intern</div>
+      <div class="org">Sheraspace Ltd — Baridhara DOHS, Dhaka</div>
+      <div class="meta">Jun 2022 – Dec 2022</div>
+      <p>Developed an AI-powered crop-recommendation engine, training and comparing classical ML and ANN models and exposing predictions through a Django REST API for real-time use.</p>
+    </div>
+    </div>
+  </section>
+
+
+
+  <section id="publications">
+    <p class="sec-label">Peer-reviewed &amp; under review</p>
+    <h2>Publications</h2>
+    <ol class="pubs">
+      <li>
+        <div class="pub-title">GraphPTox: Integrating Protein Language Models with Graph Neural Networks for Interpretable Peptide Toxicity Prediction</div>
+        <div class="authors"><span class="me">Md Al Amin</span>*, Anik Dev Nath, Bikash Kumar Paul, Md Zahid Hasan Ontor, Touhid Bhuiyan <em>(* equal contribution)</em></div>
+        <div class="venue">Under review · 2026</div>
+        <div class="abstract">An interpretable framework combining protein language models with graph neural networks for peptide toxicity prediction. Sequence embeddings and structural graph representations are fused for higher accuracy, while explainability techniques surface the key residues and structural motifs driving toxicity.</div>
+        <div class="links"><a href="https://github.com/Alamin-Tokee" target="_blank" rel="noopener">Code</a><a href="https://www.arxiv.org" target="_blank" rel="noopener">Paper</a></div>
+      </li>
+      <li>
+        <div class="pub-title">GastroGT: Gastric Cancer Gene Interaction Subtype Recognition from Gene Expression with Transformer-based Classification</div>
+        <div class="authors"><span class="me">Md Al Amin</span>*, Bikash Kumar Paul, Md Zahid Hasan Ontor, Mehedi Hassan, Touhid Bhuiyan <em>(* equal contribution)</em></div>
+        <div class="venue">Under review · 2025</div>
+        <div class="abstract">A transformer-based deep learning framework for analyzing and classifying gastric cancer subtypes from high-dimensional gene expression data, modeling gene-interaction structure to improve subtype recognition.</div>
+        <div class="links"><a href="https://github.com/Alamin-Tokee" target="_blank" rel="noopener">Code</a><a href="https://www.biorxiv.org" target="_blank" rel="noopener">Paper</a></div>
+      </li>
+      <li>
+        <div class="pub-title">Spatial Prediction of Soil Microplastics and Organic Matter Using Graph Attention Networks</div>
+        <div class="authors">Anik Dev Nath*, <span class="me">Md Al Amin</span>*, Mahjebin Jerin, Mehedi Hasan, Bikash Kumar Paul, Touhid Bhuiyan <em>(* equal contribution)</em></div>
+        <div class="venue">Under review · 2025</div>
+        <div class="abstract">Graph attention networks for spatial estimation of soil microplastics and organic matter, supporting assessment of ecosystem health and sustainable land use from geospatial environmental data.</div>
+        <div class="links"><a href="https://github.com/Alamin-Tokee" target="_blank" rel="noopener">Code</a><a href="https://www.biorxiv.org" target="_blank" rel="noopener">Paper</a></div>
+      </li>
+      <li>
+        <div class="pub-title">Transcriptomic Analysis and Predictive Modeling of Lung Squamous Cell Carcinoma</div>
+        <div class="authors"><span class="me">Md Al Amin</span>*, Mahjebin Jerin, Mehedi Hasan, Bikash Kumar Paul, Touhid Bhuiyan <em>(* equal contribution)</em></div>
+        <div class="venue">Under review · 2025</div>
+        <div class="abstract">Molecular characterization and predictive modeling of Lung Squamous Cell Carcinoma (LUSC), combining transcriptomic analysis with machine learning to support earlier diagnosis and inform therapeutic strategy.</div>
+        <div class="links"><a href="https://github.com/Alamin-Tokee" target="_blank" rel="noopener">Code</a><a href="https://www.biorxiv.org" target="_blank" rel="noopener">Paper</a></div>
+      </li>
+      <li>
+        <div class="pub-title">Subtype-Specific Biomarker Discovery in Leukemia: Bridging Expression Profiling and Machine Learning</div>
+        <div class="authors">Anik Dev Nath*, <span class="me">Md Al Amin</span>*, Sajib Acharjee Dip, Mahjebin Jerin, Bikash Kumar Paul, Touhid Bhuiyan <em>(* equal contribution)</em></div>
+        <div class="venue">Under review · 2025</div>
+        <div class="abstract">Expression profiling combined with machine learning to identify subtype-specific biomarkers in leukemia, aimed at earlier and more accurate diagnosis to support successful treatment and recovery.</div>
+        <div class="links"><a href="https://github.com/Alamin-Tokee" target="_blank" rel="noopener">Code</a><a href="https://www.biorxiv.org" target="_blank" rel="noopener">Paper</a></div>
+      </li>
+      <li>
+        <div class="pub-title">FedX: A Hybrid Federated Learning Approach for Parkinson's Disease Diagnosis using Xception</div>
+        <div class="authors"><span class="me">Md Al Amin</span>*, Bikash Kumar Paul, Rafid Mostafiz, Sajib Acharjee Dip, Zahid Ontor <em>(* equal contribution)</em></div>
+        <div class="venue">Biological Material and Devices · 2024 <span class="tag">Spotlight</span></div>
+        <div class="abstract">An Xception-based model within a federated learning framework for privacy-preserving Parkinson's diagnosis. Trained across five client-oriented subsets of the Parkinson's Brain MRI Dataset with repeated evaluation rounds to mitigate overfitting, FedX reached 96.82% accuracy while keeping data decentralized and private.</div>
+        <div class="links"><a href="https://github.com/Alamin-Tokee" target="_blank" rel="noopener">Code</a><a href="https://www.biorxiv.org" target="_blank" rel="noopener">Paper</a></div>
+      </li>
+      <li>
+        <div class="pub-title">A Bioinformatics and Systems Biology Technique to Identify Candidate Biomarkers and Functional Pathways Among Stress and Depression</div>
+        <div class="authors">Md. Abul Basar*, Md. Faruk Hosen, <span class="me">Md. Al Amin</span>*#, Nasima Islam Bithi, Bikash Kumar Paul <em>(* equal contribution, # corresponding author)</em></div>
+        <div class="venue">IEEE WIECON-ECE · 2022</div>
+        <div class="abstract">Gene-network analysis of microarray and RNA-seq datasets (GSE183648, GSE101521) identifying ITGB3, ANGPTL4, ITGB1, PPARA, and RXRA as candidate hub-gene biomarkers of stress and depression, supported by PPI-network, KEGG pathway, and gene-ontology analysis.</div>
+        <div class="links"><a href="https://github.com/Alamin-Tokee" target="_blank" rel="noopener">Code</a><a href="https://www.biorxiv.org" target="_blank" rel="noopener">Paper</a></div>
+      </li>
+      <li>
+        <div class="pub-title">Real-time Detection and Localization of Colorectal Polyps from Colonoscopy Images: A Deep Learning Approach</div>
+        <div class="authors"><span class="me">Md Al Amin</span>*, Bikash Kumar Paul*, Nasima Islam Bithi <em>(* equal contribution)</em></div>
+        <div class="venue">IEEE WIECON-ECE · 2022</div>
+        <div class="abstract">Early colorectal polyp detection on the Kvasir-SEG dataset with data augmentation, benchmarking YOLOv5s, YOLOv5m, and YOLOv5l. The largest variant, YOLOv5l, achieved the best average testing IoU of 86.25%.</div>
+        <div class="links"><a href="https://github.com/Alamin-Tokee" target="_blank" rel="noopener">Code</a><a href="https://www.biorxiv.org" target="_blank" rel="noopener">Paper</a></div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="projects">
+    <p class="sec-label">Applied &amp; industry</p>
+    <h2>Projects</h2>
+    <ol class="pubs">
+      <li>
+        <div class="pub-title">AutoInspect-RF — Automated Refrigerator Inspection System</div>
+        <div class="venue">Walton Hi-Tech Industries · 2026</div>
+        <div class="abstract">A computer-vision system that automatically detects refrigerator color, model, and door type on the assembly line, with real-time capture and database integration. Reduced manual inspection, improved data accuracy and throughput, and supported Industry 4.0 smart-manufacturing goals.</div>
+        <div class="links"><a href="https://github.com/Alamin-Tokee" target="_blank" rel="noopener">Code</a></div>
+      </li>
+      <li>
+        <div class="pub-title">Optimax — Compressor Production Performance Matrix</div>
+        <div class="venue">Walton Hi-Tech Industries · 2025 · Lead &amp; Developer</div>
+        <div class="abstract">Real-time data acquisition using Python and Siemens PLCs over MQTT, with MySQL storage and a ReactJS/NodeJS dashboard visualizing compressor metrics for performance monitoring and maintenance forecasting.</div>
+        <div class="links"><a href="https://github.com/Alamin-Tokee" target="_blank" rel="noopener">Code</a></div>
+      </li>
+      <li>
+        <div class="pub-title">QCmatrix — Air Conditioner OQC &amp; Lift QC System</div>
+        <div class="venue">Walton Hi-Tech Industries · 2025 · Lead &amp; Developer</div>
+        <div class="abstract">A quality-control system tracking 1,000+ components per lift project, letting R&amp;I teams initiate and QC teams verify against predefined criteria, with real-time dashboards in PHP, JavaScript, jQuery, and AJAX on a PostgreSQL backend.</div>
+        <div class="links"><a href="https://github.com/Alamin-Tokee" target="_blank" rel="noopener">Code</a></div>
+      </li>
+      <li>
+        <div class="pub-title">Weldtrack — Smart Monitoring for Welding Machines</div>
+        <div class="venue">Walton Hi-Tech Industries · 2024 · Lead &amp; Developer <span class="tag">Spotlight</span></div>
+        <div class="abstract">A single-board-computer data acquisition system in Python monitoring ultrasonic welding machines in real time, a React Native app for operator time logging, and a NodeJS/ReactJS/Redux dashboard surfacing shift-wise efficiency and machine health.</div>
+        <div class="links"><a href="https://github.com/Alamin-Tokee" target="_blank" rel="noopener">Code</a></div>
+      </li>
+      <li>
+        <div class="pub-title">Metalflow — Power Press Production Analytics</div>
+        <div class="venue">Walton Hi-Tech Industries · 2024 · Lead &amp; Developer</div>
+        <div class="abstract">A full-stack monitoring system for real-time power-press analytics using Python, Siemens PLCs, and MQTT, with a MySQL backend and a PHP/AJAX/JavaScript dashboard reporting on performance, downtime, and operator productivity.</div>
+        <div class="links"><a href="https://github.com/Alamin-Tokee" target="_blank" rel="noopener">Code</a></div>
+      </li>
+      <li>
+        <div class="pub-title">Poramorsho — AI-powered Crop Recommendation Engine</div>
+        <div class="venue">Sheraspace · 2023 · Developer</div>
+        <div class="abstract">A machine-learning recommendation engine for crop selection from soil pH, weather, and precipitation data, training Random Forest, Logistic Regression, Decision Tree, and ANN models, served through a Django REST API on PostgreSQL and Apache.</div>
+        <div class="links"><a href="https://github.com" target="_blank" rel="noopener">Code</a><a href="https://www.biorxiv.org" target="_blank" rel="noopener">Paper</a></div>
+      </li>
+    </ol>
+  </section>
+
+
+
+  <section id="skills">
+    <p class="sec-label">Technical</p>
+    <h2>Skills</h2>
+    <ul class="clean skills">
+      <li><strong>Programming</strong> — C/C++, Java, Python, JavaScript, PHP, GoLang</li>
+      <li><strong>ML &amp; DL</strong> — PyTorch, TensorFlow, Keras, Scikit-Learn, Pandas, NumPy, Matplotlib</li>
+      <li><strong>Databases</strong> — SQL, MySQL, PostgreSQL, Oracle, MariaDB, MongoDB, Redis</li>
+      <li><strong>Web Development</strong> — React, React Native, Node, Express, Django, Gin, Tailwind, Bootstrap</li>
+      <li><strong>Tools &amp; MLOps</strong> — Git, Docker, Kubernetes, Terraform, Jenkins, Ansible, Prometheus, Grafana, AWS, Linux</li>
+      <li><strong>Research &amp; Misc</strong> — Jupyter, LaTeX, PowerBI, DataGrip, DBeaver, Microsoft Visio</li>
+    </ul>
+  </section>
+
+  <section id="awards">
+    <p class="sec-label">Recognition</p>
+    <h2>Honors &amp; Awards</h2>
+    <ul class="clean awards">
+      <li>NAWA Banach Scholarship, Polish Government <span class="yr">· 2024</span></li>
+      <li>Monthly Best Achiever, Walton <span class="yr">· 2024</span></li>
+      <li>ICT Carnival Finalist, DIU <span class="yr">· 2020</span></li>
+      <li>University Merit Scholarship, DIU <span class="yr">· 2020</span></li>
+      <li>LeetCode — World Rank 12,134 <span class="yr">· 2020</span></li>
+      <li>ICPC Dhaka Regional <span class="yr">· 2019</span></li>
+      <li>DIU Intra-University Programming Contest <span class="yr">· 2019</span></li>
+      <li>DIU Take-Off Programming Contest <span class="yr">· 2018</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2026 Md Al Amin
+  </footer>
+
+</div>
+</body>
+</html>
