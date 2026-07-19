@@ -32,7 +32,7 @@
     background:var(--bg);
     color:var(--text);
     font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    font-size:14px;
+    font-size:13px;
     line-height:1.50;
     -webkit-font-smoothing:antialiased;
   }
@@ -52,18 +52,18 @@
   .head-text{flex:1;min-width:0;}
   h1{
     font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    font-size:2.5rem;line-height:1.1;color:var(--heading);
+    font-size:1.50rem;line-height:1.1;color:var(--heading);
     margin:0 0 6px;font-weight:800;letter-spacing:-.5px;
   }
-  .tagline{color:var(--accent);font-weight:600;font-size:1.05rem;margin:0 0 14px;}
-  .badges{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--muted);font-size:.92rem;margin:0 0 14px;}
+  .tagline{color:var(--accent);font-weight:600;font-size:0.90rem;margin:0 0 14px;}
+  .badges{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--muted);font-size:.85rem;margin:0 0 14px;}
   .badges span{display:inline-flex;align-items:center;gap:7px;}
   .badges svg{width:18px;height:18px;color:var(--accent);flex:0 0 18px;}
-  .social{font-weight:600;font-size:.96rem;}
+  .social{font-weight:600;font-size:.85rem;}
   .social a{white-space:nowrap;}
   .social .sep{color:var(--rule);margin:0 5px;}
 
-  .lede{margin:26px 0 0;font-size:.90rem;}
+  .lede{margin:26px 0 0;font-size:.85rem;}
   .lede strong{color:var(--heading);}
   .lede .highlight{
     color:var(--heading);font-weight:600;
@@ -77,7 +77,7 @@
     font-size:.74rem;font-weight:700;color:var(--accent-2);margin:0 0 4px;
   }
   h2{
-    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:1.5rem;color:var(--heading);
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:1.20rem;color:var(--heading);
     margin:0 0 18px;font-weight:700;padding-bottom:10px;border-bottom:1px solid var(--rule);
   }
 
@@ -97,17 +97,17 @@
   .entry-list{margin-left:0;}
   .entry{margin-bottom:26px;}
   .entry:last-child{margin-bottom:0;}
-  .entry .role{font-weight:700;color:var(--heading);font-size:1.05rem;}
-  .entry .org{color:var(--accent);font-weight:600;font-size:.97rem;}
+  .entry .role{font-weight:700;color:var(--heading);font-size:0.95rem;}
+  .entry .org{color:var(--accent);font-weight:600;font-size:.90rem;}
   .entry .meta{color:var(--muted);font-size:.9rem;margin:1px 0 6px;}
-  .entry p{margin:0;font-size:.97rem;}
-  .entry ul{margin:6px 0 0;padding-left:18px;font-size:.96rem;}
+  .entry p{margin:0;font-size:.85rem;}
+  .entry ul{margin:6px 0 0;padding-left:18px;font-size:.85rem;}
   .entry ul li{margin-bottom:3px;}
 
   /* ---------- Publications: flowing list, no boxes ---------- */
   ol.pubs{counter-reset:pub;list-style:none;padding:0;margin:0;}
   ol.pubs > li{
-    counter-increment:pub;position:relative;padding:0 0 26px 44px;margin-bottom:26px;
+    counter-increment:pub;position:relative;padding:0 0 26px 44px;margin-bottom:15px;
     border-bottom:1px solid var(--rule);
   }
   ol.pubs > li:last-child{border-bottom:none;margin-bottom:0;}
@@ -116,16 +116,16 @@
     font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:1.5rem;font-weight:700;color:var(--accent);
     line-height:1;
   }
-  .pub-title{font-weight:700;color:var(--heading);font-size:1.00rem;line-height:1.2;}
-  .authors{font-size:.95rem;color:var(--text);margin:5px 0 3px;}
+  .pub-title{font-weight:700;color:var(--heading);font-size:0.90rem;line-height:1.2;}
+  .authors{font-size:.85rem;color:var(--text);margin:3px 0 1px;}
   .authors .me{font-weight:700;color:var(--heading);border-bottom:2px solid var(--accent-soft);}
-  .venue{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-style:italic;color:var(--muted);font-size:1rem;}
+  .venue{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-style:italic;color:var(--muted);font-size:0.90rem;}
   .venue .tag{
     font-family:"Inter",sans-serif;font-style:normal;background:var(--accent-soft);color:var(--accent);
     font-weight:700;font-size:.68rem;letter-spacing:.04em;text-transform:uppercase;
     padding:2px 8px;border-radius:4px;margin-left:8px;vertical-align:middle;
   }
-  .abstract{font-size:.96rem;color:var(--muted);margin:9px 0 8px;}
+  .abstract{font-size:.85rem;color:var(--muted);margin:9px 0 8px;}
   .links a{
     font-size:.85rem;font-weight:600;margin-right:8px;color:var(--accent);
     border:1px solid var(--rule);border-radius:5px;padding:2px 10px;
@@ -137,14 +137,14 @@
 
   /* Skills */
   ul.skills{list-style:disc;padding-left:22px;}
-  .skills li{margin-bottom:10px;}
+  .skills li{margin-bottom:8px;}
   .skills li::marker{color:var(--accent);}
   .skills strong{color:var(--heading);}
 
   ul.awards{columns:1;list-style:disc;padding-left:22px;}
-  .awards li{margin-bottom:9px;break-inside:avoid;}
+  .awards li{margin-bottom:8px;break-inside:avoid;}
   .awards li::marker{color:var(--accent);}
-  .awards .yr{color:var(--muted);font-size:.88rem;}
+  .awards .yr{color:var(--muted);font-size:.85rem;}
 
   footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--rule);text-align:center;color:var(--muted);font-size:.88rem;}
 
@@ -154,7 +154,7 @@
     .pro-pic{width:150px;height:150px;flex-basis:150px;}
     .badges,.social{justify-content:center;}
     .lede{text-align:left;}
-    h1{font-size:2.2rem;}
+    h1{font-size:1.50rem;}
     .awards{columns:1;}
     .wrap{padding:40px 20px 60px;}
   }
@@ -225,7 +225,13 @@
       <div class="role">B.Sc. in Software Engineering</div>
       <div class="org">Daffodil International University (DIU)</div>
       <div class="meta">Jan 2018 – Apr 2022 · High academic distinction</div>
-      <p>Thesis: <em>Colon polyp detection using deep learning.</em> Built a strong foundation in programming, algorithms, and data structures, and began research into AI applications for healthcare.</p>
+      <p>Thesis: Real-time colorectal polyp classification and localization from colonoscopy images using deep learning approaches.</p>
+      <ul>
+        <li>Participated in specialized training programs and workshops focused on emerging technologies and industry trends, including cloud computing, DevOps practices, microservices architecture, and agile methodologies.</li>
+        <li>Engaged with the tech community through forums, meetups, and conferences, actively participating in discussions, sharing insights, and collaborating on open-source projects to broaden my understanding and stay updated with the latest developments.</li>
+        <li>Applied theoretical knowledge to practical projects and experiments, exploring different programming languages, frameworks, and tools, and gaining hands-on experience in areas such as web development, mobile app development, and data science.</li>
+        <li>Adopted a growth mindset and embraced lifelong learning as a core value, regularly seeking feedback, reflecting on experiences, and setting personal development goals to continuously enhance my skills and expertise in software engineering.</li>
+      </ul>
     </div>
     <div class="entry">
       <div class="role">Higher Secondary — Science</div>
@@ -446,12 +452,23 @@
     <p class="sec-label">Technical</p>
     <h2>Skills</h2>
     <ul class="clean skills">
-      <li><strong>Programming</strong> — C/C++, Java, Python, JavaScript, PHP, GoLang</li>
-      <li><strong>ML &amp; DL</strong> — PyTorch, TensorFlow, Keras, Scikit-Learn, Pandas, NumPy, Matplotlib</li>
-      <li><strong>Databases</strong> — SQL, MySQL, PostgreSQL, Oracle, MariaDB, MongoDB, Redis</li>
-      <li><strong>Web Development</strong> — React, React Native, Node, Express, Django, Gin, Tailwind, Bootstrap</li>
-      <li><strong>Tools &amp; MLOps</strong> — Git, Docker, Kubernetes, Terraform, Jenkins, Ansible, Prometheus, Grafana, AWS, Linux</li>
-      <li><strong>Research &amp; Misc</strong> — Jupyter, LaTeX, PowerBI, DataGrip, DBeaver, Microsoft Visio</li>
+      <li><strong>Programming &amp; Scientific Computing</strong> — Python, C/C++, Java, Go, MATLAB, SQL, NumPy, Pandas, SciPy, Jupyter</li>
+
+      <li><strong>Machine Learning &amp; Deep Learning</strong> — PyTorch, TensorFlow, Keras, Scikit-Learn, CNNs, Transformers, Vision Transformers, Graph Neural Networks (GNNs), Representation Learning, Transfer Learning, Self-Supervised Learning</li>
+
+      <li><strong>Generative &amp; Advanced AI</strong> — Generative AI, Large Language Models (LLMs), Vision-Language Models, Multimodal Learning, Contrastive Learning, Diffusion Models, Reinforcement Learning, Federated Learning, Retrieval-Augmented Generation (RAG), Explainable AI</li>
+
+      <li><strong>Biomedical AI &amp; Computational Biology</strong> — Medical Image Analysis, Bioinformatics, Computational Biology, Cancer Genomics, Gene Expression Analysis, Multi-Omics Integration, Biomarker Discovery, Molecular Representation Learning, Drug Discovery, Biomedical NLP</li>
+
+      <li><strong>Research Methods &amp; Data Analysis</strong> — Exploratory Data Analysis, Experimental Design, Hypothesis Testing, Statistical Inference, Model Evaluation, Benchmarking, Reproducible Research, Scientific Visualization</li>
+
+      <li><strong>Data &amp; Database Systems</strong> — SQL, MySQL, PostgreSQL, Oracle, MongoDB, Redis, Data Pipelines, Structured and Unstructured Data Processing</li>
+
+      <li><strong>Research Infrastructure &amp; Reproducibility</strong> — Git/GitHub, Linux, Docker, Kubernetes, AWS, Google Colab, Kaggle, LaTeX, Parallel &amp; Distributed Computing, MLOps</li>
+
+      <li><strong>Responsible &amp; Explainable AI</strong> — Interpretability, Explainable AI, Fairness, Bias Mitigation, Uncertainty Quantification, Trustworthy AI, AI Safety, Responsible AI Deployment</li>
+
+      <li><strong>Scientific Communication &amp; Visualization</strong> — Matplotlib, Seaborn, Power BI, Microsoft Excel, LaTeX, Microsoft Visio, Scientific Writing, Technical Documentation</li>
     </ul>
   </section>
 
