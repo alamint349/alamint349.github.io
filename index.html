@@ -312,7 +312,7 @@
   }
 
   ol.pubs > li::before{
-    content:counter(pub);
+    /* content:counter(pub); */
     position:absolute;
     left:0;
     top:-2px;
@@ -393,10 +393,10 @@
 
   /* Skills */
 
-  ul.skills{
+  /* ul.skills{
     list-style:disc;
     padding-left:22px;
-  }
+  } */
 
   .skills li{
     margin-bottom:8px;
@@ -773,7 +773,7 @@
       <li>
           <div class="pub-title">Quantum-Resilient Secure Aggregation with Threshold Recovery for Federated Learning under Client Dropout</div>
           <div class="authors"><span class="me">Md Al Amin*</span>, Anik Dev Nath, Ramprosad Sarker, Bikash Kumar Paul, Touhid Bhuiyan <em>(* equal contribution)</em></div>
-          <div class="venue">Experimental Stage · 2026</div>
+          <div class="venue">Experimental Stage · 2026 <span class="tag">Experimental</span></div>
           <div class="abstract">A quantum-resilient secure aggregation framework for federated learning that addresses privacy leakage and client dropout using lattice-based cryptography and Shamir secret sharing. The proposed approach enables secure and correct model aggregation despite client failures while maintaining model performance with statistically significant confidence intervals. Experimental results demonstrate robust aggregation under client dropout rates of up to 60%, highlighting the framework's resilience in unreliable and potentially quantum-enabled adversarial environments.</div>
           <div class="links"><a href="https://github.com/Alamin-Tokee" target="_blank" rel="noopener">Code</a><a href="https://www.arxiv.org" target="_blank" rel="noopener">Paper</a></div>
       </li>
