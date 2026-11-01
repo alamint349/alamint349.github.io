@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://192.168.200.22:8090/dev/54672/print/wapi_ac/model.php
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: is_flameable
+      value: "1"
+    - type: text
+      key: is_indoor
+      value: "1"
+    - type: text
+      key: is_walton
+      value: "1"
+settings: {}
+order: 7000

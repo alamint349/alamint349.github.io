@@ -1,0 +1,17 @@
+$kind: http-request
+description: The API is used only for the CAC manual to maintain other applications running. Here, we have maintained a teamwise procedure to ensure better performance and accuracy in the production line. Since this is a micro-service application, if this API fails, it won't interrupt other stations or sections to run their operation. Leveraging micro-service applications in the production line fosters an application with more fault tolerance and reliability.
+url: http://192.168.200.22:8090/dev/54672/ac/report/pdm_sfg_report/cacman_temp_api.php?section=fin_and_tube_heat_exc&&station=cac_manual&&date=2025-02-19
+method: GET
+queryParams:
+  - key: section
+    value: fin_and_tube_heat_exc
+  - key: null
+    value: null
+  - key: station
+    value: cac_manual
+  - key: null
+    value: null
+  - key: date
+    value: 2025-02-19
+settings: {}
+order: 12000

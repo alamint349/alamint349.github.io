@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{training_api}}/matches?status=played"
+method: GET
+queryParams:
+  status: played
+body:
+  type: text
+  content: ""
+settings: {}
+order: 2000

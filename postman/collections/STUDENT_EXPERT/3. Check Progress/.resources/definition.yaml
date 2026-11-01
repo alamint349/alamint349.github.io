@@ -1,0 +1,54 @@
+$kind: collection
+scripts:
+  - type: http:beforeRequest
+    code: |
+      var uID = pm.collectionVariables.get("userId");
+      if(!uID)
+          pm.collectionVariables.set("userId", pm.variables.replaceIn('{{$guid}}'));
+    language: text/javascript
+  - type: http:afterResponse
+    code: |-
+      var template = `
+      <!--showdown for converting md to html-->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+          <script type="text/javascript">
+              function getContent(orig){
+                  var converter = new showdown.Converter(), text = orig, html = converter.makeHtml(text);
+                  return html;
+              }
+          </script>
+      <h1>{{response.title}}</h1>
+      <p>
+      <script type="text/javascript">
+          document.write(getContent("{{response.intro}}"));
+      </script>
+      </p>
+      <div id='skills'></div>
+      <script type="text/javascript">
+      pm.getData(function(error, data) {
+          let skills=data.response.skills; let i; let skillList=""; console.log(skills.length)
+          for(i=0; i<skills.length; i++){
+              let done = skills[i].value ? "&#9989;" : "&#10060;"
+              skillList+="<strong>"+(i+1)+". "+skills[i].name+"</strong> "+done+getContent(skills[i].hint);
+          }
+          document.getElementById('skills').innerHTML=skillList;
+      });
+      </script>
+      `;
+
+      // Set visualizer
+      pm.visualizer.set(template, {
+          // Pass the response body parsed as JSON as `data`
+          response: pm.response.json()
+      });
+
+      if(pm.response.json().done) pm.collectionVariables.set('skilled', true);
+    language: text/javascript
+auth:
+  - id: 7b1bd824-55d4-48b4-85e1-448af8012c19
+    type: apikey
+    name: apikey auth
+    credentials:
+      value: loads
+      key: auth_key
+order: 3000

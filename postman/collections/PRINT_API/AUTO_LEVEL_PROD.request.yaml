@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://man.api.waltonbd.com/printingapi/ac/api.php
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: barcode
+      value: 60XZ0101VA003456
+settings: {}
+order: 3000

@@ -1,0 +1,16 @@
+$kind: http-request
+url: http://192.168.200.22:8090/dev/54672/ac/report/pdm_sfg_report/rac_brazing.php?section=rac_outdoor&&station=rac_brazing&&date=2025-03-12
+method: GET
+queryParams:
+  - key: section
+    value: rac_outdoor
+  - key: null
+    value: null
+  - key: station
+    value: rac_brazing
+  - key: null
+    value: null
+  - key: date
+    value: 2025-03-12
+settings: {}
+order: 14000

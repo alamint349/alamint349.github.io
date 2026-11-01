@@ -1,0 +1,41 @@
+$kind: http-request
+url: http://127.0.0.1:8000/graphql/
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: graphql
+  content:
+    query: "mutation {\r
+
+      \  updateBusinessEntity(\r
+
+      \    input: {\r
+
+      \      businessEntityId: 3\r
+
+      \      businessEntityName: \"ABC Plaza\"\r
+
+      \      changeMessage: \"Fixed name typo\"\r
+
+      \    }\r
+
+      \  ) {\r
+
+      \    statusCode\r
+
+      \    message\r
+
+      \    businessEntity {\r
+
+      \      businessEntityId\r
+
+      \      businessEntityName\r
+
+      \    }\r
+
+      \  }\r
+
+      }\r\n"
+settings: {}
+order: 3000

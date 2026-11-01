@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{training_api}}/match"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"match\": \"Cup Final\",\r
+
+    \  \"when\": \"{{$randomDateFuture}}\",\r
+
+    \  \"against\": \"Academical\"\r
+
+    }"
+settings: {}
+order: 3000

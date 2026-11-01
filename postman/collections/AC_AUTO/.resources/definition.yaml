@@ -1,0 +1,2 @@
+$kind: collection
+description: These api is use to run the heat exchanger section smoothly and flawlessly. If any of this api doesn't work properly, it will cause the data and application. So, if we will find any problem in application, before going to check the code, we will check these api first that will help to figure out problem and bug early otherwise it will take more time to find out exact and real reason behind the application failure.

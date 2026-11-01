@@ -1,0 +1,17 @@
+$kind: http-request
+description: It use for evaporator and condenser daily performance and acivement and target that integrated into the display file. Every single request need to add a section, station and date parameter to get the current date data. But it is restricted for previous data call due to some issues.
+url: http://meswaltonbd.com/display/ac/report/pdm_sfg_report/common.php?section=fin_and_tube_heat_exc&&station=fin_press_con&&date=2025-03-25
+method: GET
+queryParams:
+  - key: section
+    value: fin_and_tube_heat_exc
+  - key: null
+    value: null
+  - key: station
+    value: fin_press_con
+  - key: null
+    value: null
+  - key: date
+    value: 2025-03-25
+settings: {}
+order: 3000

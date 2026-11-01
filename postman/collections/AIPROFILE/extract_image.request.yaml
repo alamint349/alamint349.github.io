@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://127.0.0.1:8000/extract
+method: POST
+body:
+  type: formdata
+  content:
+    - type: file
+      key: file
+      src: postman-cloud:///1f0e9f4f-b26a-4030-a8cd-0061accc2730
+settings: {}
+order: 1000

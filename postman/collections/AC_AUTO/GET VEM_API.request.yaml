@@ -1,0 +1,16 @@
+$kind: http-request
+url: http://meswaltonbd.com/display/ac/report/pdm_sfg_report/vem_api.php?section=fin_and_tube_heat_exc&&station=ver_expand_mac&&date=2025-05-05
+method: GET
+queryParams:
+  - key: section
+    value: fin_and_tube_heat_exc
+  - key: null
+    value: null
+  - key: station
+    value: ver_expand_mac
+  - key: null
+    value: null
+  - key: date
+    value: 2025-05-05
+settings: {}
+order: 9000

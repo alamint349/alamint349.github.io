@@ -1,0 +1,48 @@
+$kind: http-request
+description: Hit **Send**, complete each requirement and keep sending until you get a success response!
+url: postman-skill-checker.glitch.me/skills?email=alamintokee@gmail.com
+method: POST
+headers:
+  - key: user-id
+    value: "{{userId}}"
+    description: plz don't edit or remove this header
+  - key: course
+    value: "{{myCourse}}"
+    description: plz don't edit or remove this header
+  - key: response-value
+    value: "{{responseData}}"
+    description: plz don't edit or remove this header
+queryParams:
+  email: alamintokee@gmail.com
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"Al-Amin Tokee\"\r
+
+    }"
+scripts:
+  - type: afterResponse
+    code: "var jsonData = JSON.parse(responseBody);\r
+
+      \r
+
+      pm.test(\"Skills Check\", function () {\r
+
+      \r
+
+      pm.environment.set(\"responseData\",jsonData.rand);\r
+
+      \r
+
+      console.log(jsonData.rand)\r
+
+      \r
+
+      })"
+    language: text/javascript
+  - type: beforeRequest
+    code: if(!pm.collectionVariables.get("ResponseBody")) pm.collectionVariables.set("responseData");
+    language: text/javascript
+settings: {}
+order: 1000

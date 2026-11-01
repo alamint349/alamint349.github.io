@@ -1,0 +1,43 @@
+$kind: http-request
+url: http://127.0.0.1:8000/graphql/
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: graphql
+  content:
+    query: "mutation {\r
+
+      \  createBusinessMarket(input: {\r
+
+      \    businessEntityId: 3,\r
+
+      \    marketName: \"Electronics Hub3\",\r
+
+      \    marketGoodsType: \"Services\",\r
+
+      \    description: \"Market for consumer electronics\"\r
+
+      \  }) {\r
+
+      \    statusCode\r
+
+      \    message\r
+
+      \    businessMarket {\r
+
+      \      marketId\r
+
+      \      marketName\r
+
+      \      marketGoodsType\r
+
+      \      description\r
+
+      \    }\r
+
+      \  }\r
+
+      }"
+settings: {}
+order: 2000

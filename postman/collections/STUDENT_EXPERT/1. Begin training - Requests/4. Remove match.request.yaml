@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{training_api}}/match/:match_id"
+method: DELETE
+pathVariables:
+  match_id: yTj4sx4LU
+settings: {}
+order: 5000

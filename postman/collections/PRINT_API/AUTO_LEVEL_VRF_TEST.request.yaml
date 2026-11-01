@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://192.168.200.22:8090/dev/54672/print/dprint/api.php
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: barcode
+      value: 48XE0302FA000035
+settings: {}
+order: 2000

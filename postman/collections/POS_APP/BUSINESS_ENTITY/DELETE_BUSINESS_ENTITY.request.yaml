@@ -1,0 +1,27 @@
+$kind: http-request
+url: http://127.0.0.1:8000/graphql/
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: graphql
+  content:
+    query: "mutation {\r
+
+      \  deleteBusinessEntity(input: {\r
+
+      \    business_entity_id: 1,\r
+
+      \    change_message: \"Company closed\"\r
+
+      \  }) {\r
+
+      \    status_code\r
+
+      \    message\r
+
+      \  }\r
+
+      }\r\n"
+settings: {}
+order: 4000

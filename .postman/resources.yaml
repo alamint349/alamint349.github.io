@@ -1,0 +1,13 @@
+workspace:
+  id: 072e38b3-d499-4e00-8374-319de5b822bb
+cloudResources:
+  collections:
+    ../postman/collections/API TEST: 18141776-1a1b5b83-9c34-4a0f-a8f3-cc15d4c45fc8
+    ../postman/collections/AIPROFILE: 18141776-b57196c7-27d4-40ca-9f95-4cf8672a2f3d
+    ../postman/collections/SNAPURL: 18141776-d79b3f9b-1d74-42f6-a936-1e1361a480e1
+    ../postman/collections/WALPACK: 18141776-b5a5c55a-a0fb-4d67-b3b3-90a7bcc818a7
+    ../postman/collections/PRINT_API: 18141776-f2343741-6e7b-474c-aa2c-d08f5b911c55
+    ../postman/collections/TEST_API: 18141776-9458c803-6a17-4380-8382-e05cd6d01b6e
+    ../postman/collections/AC_AUTO: 18141776-c1337ebc-0fa5-4bae-9127-580522d997ca
+    ../postman/collections/POS_APP: 18141776-bdb529a3-f042-4c9f-9465-a39a686af98b
+    ../postman/collections/STUDENT_EXPERT: 18141776-24b28b26-c7b1-43d8-8cc3-4ab4e12cafe2

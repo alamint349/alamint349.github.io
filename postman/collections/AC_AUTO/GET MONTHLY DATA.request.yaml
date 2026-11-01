@@ -1,0 +1,24 @@
+$kind: http-request
+url: http://192.168.200.22:8090/dev/54672/ac/report/pdm_sfg_report/api_m.php?section=fin_and_tube_heat_exc&&station=cac_manual&&shift=monthly&&emp_id=54636&&mo=2025-02
+method: GET
+queryParams:
+  - key: section
+    value: fin_and_tube_heat_exc
+  - key: null
+    value: null
+  - key: station
+    value: cac_manual
+  - key: null
+    value: null
+  - key: shift
+    value: monthly
+  - key: null
+    value: null
+  - key: emp_id
+    value: "54636"
+  - key: null
+    value: null
+  - key: mo
+    value: 2025-02
+settings: {}
+order: 6000

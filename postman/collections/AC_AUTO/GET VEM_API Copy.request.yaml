@@ -1,0 +1,16 @@
+$kind: http-request
+url: http://meswaltonbd.com/display/ac/report/pdm_sfg_report/con_braz_api.php?section=tube_processing&&station=con_braz&&date=2025-05-07
+method: GET
+queryParams:
+  - key: section
+    value: tube_processing
+  - key: null
+    value: null
+  - key: station
+    value: con_braz
+  - key: null
+    value: null
+  - key: date
+    value: 2025-05-07
+settings: {}
+order: 10000

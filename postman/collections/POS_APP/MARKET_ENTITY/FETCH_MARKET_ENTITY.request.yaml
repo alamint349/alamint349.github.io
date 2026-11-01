@@ -1,0 +1,43 @@
+$kind: http-request
+url: http://127.0.0.1:8000/graphql/
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: graphql
+  content:
+    query: "query {\r
+
+      \  allBusinessMarkets {\r
+
+      \    statusCode\r
+
+      \    message\r
+
+      \    allBusinessMarkets {\r
+
+      \      edges {\r
+
+      \        node {\r
+
+      \          marketId\r
+
+      \          marketName\r
+
+      \          marketGoodsType\r
+
+      \          description\r
+
+      \          isActive\r
+
+      \        }\r
+
+      \      }\r
+
+      \    }\r
+
+      \  }\r
+
+      }\r\n"
+settings: {}
+order: 1000

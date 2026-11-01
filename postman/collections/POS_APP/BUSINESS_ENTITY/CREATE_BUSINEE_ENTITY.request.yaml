@@ -1,0 +1,45 @@
+$kind: http-request
+url: http://127.0.0.1:8000/graphql/
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: graphql
+  content:
+    query: "mutation {\r
+
+      \  createBusinessEntity(input: {\r
+
+      \    businessEntityName: \"Walton Plaza3\"\r
+
+      \    binNumber: \"BIN-5678\"\r
+
+      \    authority: \"Authority A\"\r
+
+      \    startDate: \"2023-01-01\"\r
+
+      \    endDate: \"2026-01-01\"\r
+
+      \    code: \"CODE-5678\"\r
+
+      \    description: \"Some description\"\r
+
+      \  }) {\r
+
+      \    statusCode\r
+
+      \    message\r
+
+      \    businessEntity {\r
+
+      \      businessEntityId\r
+
+      \      businessEntityName\r
+
+      \    }\r
+
+      \  }\r
+
+      }\r\n"
+settings: {}
+order: 2000

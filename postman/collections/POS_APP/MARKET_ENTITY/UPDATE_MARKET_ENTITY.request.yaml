@@ -1,0 +1,45 @@
+$kind: http-request
+url: http://127.0.0.1:8000/graphql/
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: graphql
+  content:
+    query: "mutation {\r
+
+      \  updateBusinessMarket(input: {\r
+
+      \    marketId: 3,\r
+
+      \    marketName: \"FElectronics Hub\",\r
+
+      \    marketGoodsType: \"Finished Goods\",\r
+
+      \    description: \"Updated description\",\r
+
+      \    isActive: true,\r
+
+      \    changeMessage: \"Updating market info\"\r
+
+      \  }) {\r
+
+      \    statusCode\r
+
+      \    message\r
+
+      \    businessMarket {\r
+
+      \      marketId\r
+
+      \      marketName\r
+
+      \      description\r
+
+      \    }\r
+
+      \  }\r
+
+      }\r\n"
+settings: {}
+order: 3000

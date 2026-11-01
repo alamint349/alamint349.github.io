@@ -1,0 +1,41 @@
+$kind: http-request
+url: http://127.0.0.1:8000/graphql/
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: graphql
+  content:
+    query: "query {\r
+
+      \  allBusinessEntities(search: \"Walton\", ordering: \"business_entity_id\") {\r
+
+      \    statusCode\r
+
+      \    message\r
+
+      \    allBusinessEntities {\r
+
+      \      edges {\r
+
+      \        node {\r
+
+      \          businessEntityId\r
+
+      \          businessEntityName\r
+
+      \          binNumber\r
+
+      \          code\r
+
+      \        }\r
+
+      \      }\r
+
+      \    }\r
+
+      \  }\r
+
+      }\r\n"
+settings: {}
+order: 1000

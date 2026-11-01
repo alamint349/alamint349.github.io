@@ -1,0 +1,27 @@
+$kind: http-request
+url: http://127.0.0.1:8000/graphql/
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: graphql
+  content:
+    query: "mutation {\r
+
+      \  deleteBusinessMarket(input: {\r
+
+      \    marketId: 5,\r
+
+      \    changeMessage: \"Removed outdated market\"\r
+
+      \  }) {\r
+
+      \    statusCode\r
+
+      \    message\r
+
+      \  }\r
+
+      }\r\n"
+settings: {}
+order: 4000

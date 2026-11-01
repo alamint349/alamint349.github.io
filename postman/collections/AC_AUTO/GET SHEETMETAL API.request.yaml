@@ -1,0 +1,20 @@
+$kind: http-request
+url: http://192.168.200.22:8090/dev/54672/ac/report/pdm_sfg_report/api.php?section=sheet_metal&&station=power_press_machine&&shift=daily&&emp_id=62293
+method: GET
+queryParams:
+  - key: section
+    value: sheet_metal
+  - key: null
+    value: null
+  - key: station
+    value: power_press_machine
+  - key: null
+    value: null
+  - key: shift
+    value: daily
+  - key: null
+    value: null
+  - key: emp_id
+    value: "62293"
+settings: {}
+order: 13000

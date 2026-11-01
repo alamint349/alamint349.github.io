@@ -1,0 +1,28 @@
+$kind: http-request
+url: http://capi.waltonbd.com/api.php?report_id=97
+method: POST
+queryParams:
+  report_id: "97"
+body:
+  type: formdata
+  content:
+    - type: text
+      key: role
+      value: "2234325"
+    - type: text
+      key: station
+      value: werwrwr
+    - type: text
+      key: shift
+      value: safsfds
+    - type: text
+      key: type
+      value: fsfsf
+    - type: text
+      key: barcode
+      value: wewrwer
+    - type: text
+      key: creator
+      value: "3535"
+settings: {}
+order: 1000

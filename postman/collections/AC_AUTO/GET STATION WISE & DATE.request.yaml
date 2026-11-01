@@ -1,0 +1,32 @@
+$kind: http-request
+url: http://192.168.200.22:8090/dev/54672/ac/report/pdm_sfg_report/api.php?&&section=fin_and_tube_heat_exc&&station=fin_press_eva&&shift=daily&&emp_id=64560&&type=t1&&q_date=2025-01-25
+method: GET
+queryParams:
+  - key: null
+    value: null
+  - key: null
+    value: null
+  - key: section
+    value: fin_and_tube_heat_exc
+  - key: null
+    value: null
+  - key: station
+    value: fin_press_eva
+  - key: null
+    value: null
+  - key: shift
+    value: daily
+  - key: null
+    value: null
+  - key: emp_id
+    value: "64560"
+  - key: null
+    value: null
+  - key: type
+    value: t1
+  - key: null
+    value: null
+  - key: q_date
+    value: 2025-01-25
+settings: {}
+order: 4000

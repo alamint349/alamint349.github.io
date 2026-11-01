@@ -1,0 +1,9 @@
+$kind: http-request
+url: http://capi.waltonbd.com/api.php?report_id=354&emp_id=C-10194&date=2025-03-03
+method: GET
+queryParams:
+  report_id: "354"
+  emp_id: C-10194
+  date: 2025-03-03
+settings: {}
+order: 8000

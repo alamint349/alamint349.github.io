@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{mock_url}}/stats"
+method: GET
+scripts:
+  - type: afterResponse
+    code: "pm.test('Status code is 200', function () {\r
+
+      \    pm.response.to.have.status(200); \r
+
+      });\r
+
+      \r
+
+      pm.test('Stats include all fields', function () {\r
+
+      \    var jsonData = pm.response.json().data;\r
+
+      \    pm.expect(jsonData).to.have.all.keys('won', 'lost', 'drew');\r
+
+      });"
+    language: text/javascript
+settings: {}
+order: 3000

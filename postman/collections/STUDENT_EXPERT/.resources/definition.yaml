@@ -1,0 +1,136 @@
+$kind: collection
+description: |-
+  DEPRECATED - please use the Postman Student Program workspace [bit.ly/student-workspace](https://bit.ly/student-workspace)
+
+  Learn the skills to become a certified Postman Student Expert.
+variables:
+  mock_url: https://d78ddda7-4a57-40b3-badf-fa500035e260.mock.pstmn.io
+  userId: ""
+  training_api: postman-student-expert.glitch.me
+  email_key: ""
+  myCourse: postman-skill-checker.glitch.me
+  responseData: ""
+  skilled: ""
+scripts:
+  - type: http:afterResponse
+    code: |-
+      var template = `
+          <!--showdown for converting md to html-->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+          <script type="text/javascript">
+              function getContent(orig){
+                  var converter = new showdown.Converter(), text = orig, html = converter.makeHtml(text);
+                  return html;
+              }
+          </script>
+          
+          <!--syntax highlighting-->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/styles/default.min.css">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js"></script>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/styles/googlecode.min.css">
+          
+          <!--generic styles-->
+          <style type="text/css">
+          #notes p, #next p {padding-left:20px; border-left:2px solid #333333; }
+          #notes, #next {padding-right:20px;}
+          img {max-width:600px; padding-left:20px; padding-bottom:20px;}
+          </style>
+
+          <h2 style="color: {{status}}">{{response.tutorial.title}}</h2>
+          
+          <div id="intro"></div>
+
+          <div id="notes"></div>
+          
+          {{#if response.tutorial.next}}
+          <h3>Next</h3>
+          <div id="next"></div>
+          {{/if}}
+          
+          <script type="text/javascript">
+              if("{{response.tutorial.rip}}".length>0)
+                  document.write(getContent("{{response.tutorial.rip}}"));
+          </script>
+          
+          <script type="text/javascript">
+              if("{{response.tutorial.pic}}".length>0)
+                  document.write("<img src='{{response.tutorial.pic}}' alt='postman steps'/>");
+          </script>
+
+          <!--content to process before rendering-->
+          <script type="text/javascript">
+              pm.getData(function(error, data) {
+                  var tut = data.response.tutorial;
+                  if(tut){
+                      if(tut.steps){
+                          var i; 
+                          var infoArray = tut.steps;
+                          var notes="<div id='notes'>";
+                          for(i=0; i<infoArray.length; i++){
+                              notes+=getContent(infoArray[i].note);
+                              if(infoArray[i].raw_data){
+                                  notes+="<pre style='padding-left:20px'><code class='json'>"+JSON.stringify(infoArray[i].raw_data, null, 2)+"</code></pre>";
+                              }
+                              if(infoArray[i].js_code){
+                                  var c;
+                                  notes+="<pre style='padding-left:20px'><code class='js'>";
+                                  for(c=0; c<infoArray[i].js_code.length; c++)
+                                      notes+=infoArray[i].js_code[c]+"<br/>";
+                                  notes+="</code></pre>";
+                              }
+                              if(infoArray[i].ref_data){
+                                  notes+="<pre style='padding-left:20px'><code class='json'>"+JSON.stringify(data.response[infoArray[i].ref_data], null, 2)+"</code></pre>";
+                              }
+                              if(infoArray[i].pic)
+                                  notes+="<img src='"+infoArray[i].pic+"' alt='postman steps'/>";
+                          }
+                          notes+="</div>"
+                          document.getElementById("notes").innerHTML=notes;
+                      }
+                      document.getElementById("intro").innerHTML=getContent(tut.intro);
+                      if(tut.next){
+                          var nextDiv=document.getElementById("next");
+                          var n;
+                          var nextContent="";
+                          var nextArray=tut.next;
+                          for(n=0; n<nextArray.length; n++){
+                              nextContent+=getContent(nextArray[n].step);
+                              if(nextArray[n].raw_data){
+                                  nextContent+="<pre style='padding-left:20px'><code class='json'>"+JSON.    stringify(nextArray[n].raw_data, null, 2)+"</code></pre>";
+                              }
+                              if(nextArray[n].js_code){
+                                  var c;
+                                  nextContent+="<pre style='padding-left:20px'><code class='js'>";
+                                  for(c=0; c<nextArray[n].js_code.length; c++)
+                                      nextContent+=nextArray[n].js_code[c];
+                                  nextContent+="</code></pre>";
+                              }
+                              if(nextArray[n].pic)
+                                  nextContent+="<img src='"+nextArray[n].pic+"' alt='postman steps'/>";
+                          }
+                          nextDiv.innerHTML=getContent(nextContent);
+                      }
+                  }
+                  hljs.initHighlighting();
+              });
+          </script>
+      `;
+      if (pm.response.headers.get("Content-Type").includes("json")) {
+        pm.visualizer.set(template, {
+          response: pm.response.json(),
+          status: ("" + pm.response.code).startsWith("4") ? "#cc0000" : "#000000"
+        });
+      } else if (pm.response.headers.get("Content-Type").includes("html")) {
+        pm.visualizer.set(`{{info}}`, {
+          info:
+            "Hmm this seems to be HTML and not JSON - you might have hit an invalid endpoint - undo your changes, or close the request without saving and try opening / sending it again!"
+        });
+      }
+    language: text/javascript
+auth:
+  - id: b26fc81d-fc93-4897-b736-a74bf4dabc19
+    type: apikey
+    name: apikey auth
+    credentials:
+      key: match_key
+      value: "{{email_key}}"

@@ -1,0 +1,8 @@
+$kind: http-request
+url: https://erpgw11.waltonbd.com/walpack/tm/agency
+method: GET
+headers:
+  applicationname: TM
+  accesskey: 843E5CDAF2EBC1H9D166AC71B4569C55ABC2DC8262EDU1E6CDGTB3C3DI
+settings: {}
+order: 2000

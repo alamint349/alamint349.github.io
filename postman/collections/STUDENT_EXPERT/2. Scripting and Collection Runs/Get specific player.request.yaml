@@ -1,0 +1,25 @@
+$kind: http-request
+description: Hello, This is sample request test documentation
+url: "{{mock_url}}/player?id={{player_id}}"
+method: GET
+queryParams:
+  id: "{{player_id}}"
+scripts:
+  - type: afterResponse
+    code: "pm.test('Status code is 200', function () {\r
+
+      \    pm.response.to.have.status(200); \r
+
+      });\r
+
+      \r
+
+      if(pm.response.json().data.played<750) postman.setNextRequest('Get all players');\r
+
+      pm.environment.set('trainig environment',pm.response.json().data.played);"
+    language: text/javascript
+  - type: beforeRequest
+    code: if(!pm.variables.get('player_id')) pm.variables.set('player_id', -1);
+    language: text/javascript
+settings: {}
+order: 2000

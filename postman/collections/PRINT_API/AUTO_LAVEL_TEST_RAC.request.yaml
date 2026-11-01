@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://192.168.200.22:8090/dev/54672/print/dprint/api_new.php
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: barcode
+      value: 12XF1107VA000029
+    - type: text
+      key: max_id
+      value: "40000000"
+    - type: text
+      key: lang
+      value: ban
+settings: {}
+order: 4000
