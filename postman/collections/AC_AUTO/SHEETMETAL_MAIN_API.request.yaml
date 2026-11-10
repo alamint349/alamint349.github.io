@@ -1,16 +1,26 @@
 $kind: http-request
-url: http://meswaltonbd.com/display/ac/sheetmetal/sheet_api.php?section=sheet_metal&&station=power_press_machine&&date=2025-04-12
+url: http://meswaltonbd.com/display/ac/sheetmetal/sheet_api.php?section=sheet_metal&&station=power_press_machine&&date=2026-11-03
 method: GET
 queryParams:
   - key: section
     value: sheet_metal
-  - key: null
+    disabled: false
+    description: ""
+  - key: ""
     value: null
+    disabled: false
+    description: ""
   - key: station
     value: power_press_machine
-  - key: null
+    disabled: false
+    description: ""
+  - key: ""
     value: null
+    disabled: false
+    description: ""
   - key: date
-    value: 2025-04-12
+    value: 2026-11-03
+    disabled: false
+    description: ""
 settings: {}
-order: 15000
+order: 16000
